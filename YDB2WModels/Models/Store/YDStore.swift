@@ -8,7 +8,7 @@
 import Foundation
 
 public class YDStores: Decodable {
-  let stores: [YDStore]
+  public let stores: [YDStore]
 }
 
 public class YDStore: Decodable {
@@ -19,9 +19,9 @@ public class YDStore: Decodable {
   public let sellerID: String
   public let sellerStoreID: String
 
-  let distance: Double
-  let address: YDAddress?
-  let geolocation: YDStoreGeolocation?
+  public let distance: Double
+  public let address: YDAddress?
+  public let geolocation: YDStoreGeolocation?
 
   // MARK: Computed variables
   public var formatAddress: String {
@@ -65,5 +65,5 @@ public class YDStore: Decodable {
 
 // MARK: Geolocation
 public class YDStoreGeolocation: Decodable {
-  let latitude, longitude: Double?
+  public let latitude, longitude: Double?
 }
