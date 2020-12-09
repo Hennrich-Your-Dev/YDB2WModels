@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C135148E25806B4A0018EA0E /* YDAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C135148D25806B4A0018EA0E /* YDAddress.swift */; };
 		C1608A77258015890047444E /* YDB2WModels.h in Headers */ = {isa = PBXBuildFile; fileRef = C1608A75258015890047444E /* YDB2WModels.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C1608A832580176D0047444E /* YDStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1608A822580176D0047444E /* YDStore.swift */; };
 		C1608A9825801DE10047444E /* YDLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1608A9725801DE10047444E /* YDLocationViewModel.swift */; };
@@ -16,6 +17,7 @@
 /* Begin PBXFileReference section */
 		8662D8865036AB8A9265240B /* Pods-YDB2WModels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDB2WModels.release.xcconfig"; path = "Target Support Files/Pods-YDB2WModels/Pods-YDB2WModels.release.xcconfig"; sourceTree = "<group>"; };
 		998CAD8D11F677105B9FD604 /* Pods_YDB2WModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YDB2WModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C135148D25806B4A0018EA0E /* YDAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDAddress.swift; sourceTree = "<group>"; };
 		C1608A72258015890047444E /* YDB2WModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YDB2WModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1608A75258015890047444E /* YDB2WModels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDB2WModels.h; sourceTree = "<group>"; };
 		C1608A76258015890047444E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,6 +44,14 @@
 				998CAD8D11F677105B9FD604 /* Pods_YDB2WModels.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C135148C25806B320018EA0E /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				C135148D25806B4A0018EA0E /* YDAddress.swift */,
+			);
+			path = Address;
 			sourceTree = "<group>";
 		};
 		C1608A68258015890047444E = {
@@ -75,6 +85,7 @@
 		C1608A7E258015BD0047444E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C135148C25806B320018EA0E /* Address */,
 				C1608A9625801DD60047444E /* Location */,
 				C1608A812580175D0047444E /* Store */,
 			);
@@ -212,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1608A9825801DE10047444E /* YDLocationViewModel.swift in Sources */,
+				C135148E25806B4A0018EA0E /* YDAddress.swift in Sources */,
 				C1608A832580176D0047444E /* YDStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

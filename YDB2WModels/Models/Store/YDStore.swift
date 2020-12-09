@@ -20,28 +20,15 @@ public class YDStore: Decodable {
   public let sellerStoreID: String
 
   let distance: Double
-  let address: YDStoreAddress?
+  let address: YDAddress?
   let geolocation: YDStoreGeolocation?
 
   // MARK: Computed variables
   public var formatAddress: String {
-    guard let address = self.address,
-      let addressString = address.address
+    guard let address = self.address
       else { return "" }
 
-    var format: String = addressString
-
-    if let number = address.number,
-      !number.isEmpty {
-      format += ", \(number)"
-    }
-
-    if let city = address.city,
-      !city.isEmpty {
-      format += " - \(city)"
-    }
-
-    return format
+    return address.formatAddress
   }
 
   public var isLasa: Bool {
@@ -53,6 +40,7 @@ public class YDStore: Decodable {
     guard let unwarpAddress = self.address,
       var address = unwarpAddress.address
       else { return "" }
+
     let name = self.name
 
     if let number = unwarpAddress.number,
@@ -73,17 +61,6 @@ public class YDStore: Decodable {
     case address
     case geolocation
   }
-}
-
-// MARK: Address
-public struct YDStoreAddress: Decodable {
-  let zipCode: String?
-  let reference: String?
-  let number: String?
-  let address: String?
-  let neighborhood: String?
-  let city: String?
-  let state: String?
 }
 
 // MARK: Geolocation
