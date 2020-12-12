@@ -26,7 +26,7 @@ public class YDStore: Decodable {
   // MARK: Computed variables
   public var formatAddress: String {
     guard let address = self.address
-      else { return "" }
+    else { return "" }
 
     return address.formatAddress
   }
@@ -41,18 +41,21 @@ public class YDStore: Decodable {
   public var formatDistance: String {
     let kilometers = Measurement(value: distance, unit: UnitLength.kilometers)
     let meters = kilometers.converted(to: .meters)
-    return meters.value >= 1000 ? "\(kilometers.value) \(kilometers.unit.symbol)" : "\(meters.value) \(meters.unit.symbol)"
+    let formated = meters.value >= 1000 ?
+      "\(kilometers.value.round(to: 2)) \(kilometers.unit.symbol)" :
+      "\(meters.value.round(to: 2)) \(meters.unit.symbol)"
+    return formated
   }
 
   public func addressAndStoreName() -> String {
     guard let unwarpAddress = self.address,
-      var address = unwarpAddress.address
-      else { return "" }
+          var address = unwarpAddress.address
+    else { return "" }
 
     let name = self.name
 
     if let number = unwarpAddress.number,
-      !number.isEmpty {
+       !number.isEmpty {
       address += ", " + number
     }
 
@@ -74,4 +77,11 @@ public class YDStore: Decodable {
 // MARK: Geolocation
 public class YDStoreGeolocation: Decodable {
   public let latitude, longitude: Double?
+}
+
+extension Double {
+  func round(to places: Int) -> Double {
+    let divisor = pow(10.0, Double(places))
+    return (self * divisor).rounded() / divisor
+  }
 }
