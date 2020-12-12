@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "YDB2WModels"
-  spec.version      = "1.0.4"
+  spec.version      = "1.0.5"
   spec.summary      = "YDB2WModels."
   spec.homepage     = "http://yourdev/YDB2WModels"
 
