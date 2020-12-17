@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "YDB2WModels"
-  spec.version      = "1.0.7"
+  spec.version      = "1.0.8"
   spec.summary      = "YDB2WModels."
   spec.homepage     = "http://yourdev/YDB2WModels"
 
@@ -20,5 +20,7 @@ Pod::Spec.new do |spec|
   spec.source           = { :git => "https://github.com/Hennrich-Your-Dev/YDB2WModels.git", :tag => "#{spec.version}" }
   spec.source_files     = "YDB2WModels/**/*.{h,m,swift,xib,storyboard}"
   spec.swift_version    = "5.0"
+
+  spec.dependency       "YDExtensions"
 
 end
