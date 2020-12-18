@@ -61,7 +61,7 @@ public class YDStore: NSObject, Decodable {
 
     let weekDays = calendar.weekdaySymbols
     guard let todayWeekDay = weekDays.at(calendar.component(.weekday, from: Date()) - 1),
-          let todayStruct = schedules.value(forKey: todayWeekDay) as? YDStoreOperatingDaysStruct
+          let todayStruct = schedules.value(forKey: todayWeekDay.lowercased()) as? YDStoreOperatingDaysStruct
     else {
       return ""
     }
