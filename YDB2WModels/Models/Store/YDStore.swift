@@ -46,8 +46,8 @@ public class YDStore: NSObject, Decodable {
     let kilometers = Measurement(value: distance, unit: UnitLength.kilometers)
     let meters = kilometers.converted(to: .meters)
     let formated = meters.value >= 1000 ?
-      "\(kilometers.value.round(to: 2)) \(kilometers.unit.symbol)" :
-      "\(meters.value.round(to: 2)) \(meters.unit.symbol)"
+      "\(kilometers.value.round(to: 1)) \(kilometers.unit.symbol)" :
+      "\(meters.value.round(to: 1)) \(meters.unit.symbol)"
     return formated
   }
 
