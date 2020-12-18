@@ -66,7 +66,15 @@ public class YDStore: NSObject, Decodable {
       return ""
     }
 
-    return "\(todayStruct.start) ás \(todayStruct.end)"
+    if let start = todayStruct.start {
+      if let end = todayStruct.end {
+        return "\(start) ás \(end)"
+      }
+
+      return "A partir das \(start)"
+    }
+
+    return ""
   }
 
   public func addressAndStoreName() -> String {
@@ -115,8 +123,8 @@ public class YDStoreGeolocation: Decodable {
 }
 
 @objc public class YDStoreOperatingDaysStruct: NSObject, Decodable {
-  @objc let start: String
-  @objc let end: String
+  @objc let start: String?
+  @objc let end: String?
 }
 
 // MARK: Extension
