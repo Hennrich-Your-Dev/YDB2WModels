@@ -9,6 +9,6 @@ target 'YDB2WModels' do
   use_frameworks!
 
   # Pods for YDB2WModels
-  pod 'YDExtensions'
+  pod 'YDExtensions', "1.0.29"
 
 end

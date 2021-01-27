@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "YDB2WModels"
-  spec.version      = "1.0.12"
+  spec.version      = "1.0.0-prod"
   spec.summary      = "YDB2WModels."
   spec.homepage     = "http://yourdev/YDB2WModels"
 
@@ -21,6 +21,6 @@ Pod::Spec.new do |spec|
   spec.source_files     = "YDB2WModels/**/*.{h,m,swift,xib,storyboard}"
   spec.swift_version    = "5.0"
 
-  spec.dependency       "YDExtensions"
+  spec.dependency       "YDExtensions", "1.0.29"
 
 end
