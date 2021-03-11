@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.9.1)
   - Kingfisher (5.15.8):
     - Kingfisher/Core (= 5.15.8)
   - Kingfisher/Core (5.15.8)
@@ -17,24 +18,31 @@ PODS:
   - YDExtensions (1.0.25):
     - Kingfisher (~> 5.0)
     - KingfisherWebP (= 1.0.0)
+  - YDUtilities (1.0.10):
+    - Alamofire (~> 4.0)
 
 DEPENDENCIES:
   - YDExtensions
+  - YDUtilities
 
 SPEC REPOS:
-  "git@github.com-yourdev:Hennrich-Your-Dev/YourDev-Pods.git":
+  "git@github.com:Hennrich-Your-Dev/YourDev-Pods.git":
     - YDExtensions
+    - YDUtilities
   trunk:
+    - Alamofire
     - Kingfisher
     - KingfisherWebP
     - libwebp
 
 SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   KingfisherWebP: b1ed1dbc5e52547c5bf5f583dd5c46346f97320f
   libwebp: 946cb3063cea9236285f7e9a8505d806d30e07f3
   YDExtensions: 4bb2128aaf6085240f3abdad9c1d2dc9f07ac2c1
+  YDUtilities: 7e56ee0f48101c8bf487ad03135730dbefac70bf
 
-PODFILE CHECKSUM: d536aefd17054012b5ecfbc7b1429c1fa68d191e
+PODFILE CHECKSUM: dec087ae7cf7f2d416f890ef22a213c977b4c597
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1

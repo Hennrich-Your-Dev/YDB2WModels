@@ -11,6 +11,9 @@
 		C1608A77258015890047444E /* YDB2WModels.h in Headers */ = {isa = PBXBuildFile; fileRef = C1608A75258015890047444E /* YDB2WModels.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C1608A832580176D0047444E /* YDStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1608A822580176D0047444E /* YDStore.swift */; };
 		C1608A9825801DE10047444E /* YDLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1608A9725801DE10047444E /* YDLocationViewModel.swift */; };
+		C17146A525FA3296002AA296 /* YDOfflineOrdersProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17146A425FA3296002AA296 /* YDOfflineOrdersProduct.swift */; };
+		C17146A825FA32D8002AA296 /* YDOfflineOrdersOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17146A725FA32D8002AA296 /* YDOfflineOrdersOrder.swift */; };
+		C17146B525FA33E1002AA296 /* offlineOrders.json in Resources */ = {isa = PBXBuildFile; fileRef = C17146B425FA33E1002AA296 /* offlineOrders.json */; };
 		F33CC7C62FD2465906521E3A /* Pods_YDB2WModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 998CAD8D11F677105B9FD604 /* Pods_YDB2WModels.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,9 @@
 		C1608A76258015890047444E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1608A822580176D0047444E /* YDStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDStore.swift; sourceTree = "<group>"; };
 		C1608A9725801DE10047444E /* YDLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDLocationViewModel.swift; sourceTree = "<group>"; };
+		C17146A425FA3296002AA296 /* YDOfflineOrdersProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDOfflineOrdersProduct.swift; sourceTree = "<group>"; };
+		C17146A725FA32D8002AA296 /* YDOfflineOrdersOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDOfflineOrdersOrder.swift; sourceTree = "<group>"; };
+		C17146B425FA33E1002AA296 /* offlineOrders.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = offlineOrders.json; sourceTree = "<group>"; };
 		F1526AD2450A51E58E3699A0 /* Pods-YDB2WModels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDB2WModels.debug.xcconfig"; path = "Target Support Files/Pods-YDB2WModels/Pods-YDB2WModels.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +81,7 @@
 		C1608A74258015890047444E /* YDB2WModels */ = {
 			isa = PBXGroup;
 			children = (
+				C17146B325FA33CB002AA296 /* Resources */,
 				C1608A7E258015BD0047444E /* Models */,
 				C1608A75258015890047444E /* YDB2WModels.h */,
 				C1608A76258015890047444E /* Info.plist */,
@@ -85,6 +92,7 @@
 		C1608A7E258015BD0047444E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C17146A325FA3238002AA296 /* OfflineOrders */,
 				C135148C25806B320018EA0E /* Address */,
 				C1608A9625801DD60047444E /* Location */,
 				C1608A812580175D0047444E /* Store */,
@@ -106,6 +114,23 @@
 				C1608A9725801DE10047444E /* YDLocationViewModel.swift */,
 			);
 			path = Location;
+			sourceTree = "<group>";
+		};
+		C17146A325FA3238002AA296 /* OfflineOrders */ = {
+			isa = PBXGroup;
+			children = (
+				C17146A425FA3296002AA296 /* YDOfflineOrdersProduct.swift */,
+				C17146A725FA32D8002AA296 /* YDOfflineOrdersOrder.swift */,
+			);
+			path = OfflineOrders;
+			sourceTree = "<group>";
+		};
+		C17146B325FA33CB002AA296 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C17146B425FA33E1002AA296 /* offlineOrders.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		ECBF86AB557D839119460A91 /* Pods */ = {
@@ -187,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C17146B525FA33E1002AA296 /* offlineOrders.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +251,8 @@
 				C1608A9825801DE10047444E /* YDLocationViewModel.swift in Sources */,
 				C135148E25806B4A0018EA0E /* YDAddress.swift in Sources */,
 				C1608A832580176D0047444E /* YDStore.swift in Sources */,
+				C17146A825FA32D8002AA296 /* YDOfflineOrdersOrder.swift in Sources */,
+				C17146A525FA3296002AA296 /* YDOfflineOrdersProduct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
